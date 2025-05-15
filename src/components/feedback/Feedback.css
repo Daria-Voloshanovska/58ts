@@ -1,0 +1,35 @@
+.feedback-container {
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #9ae6e9;
+}
+.feedback-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.like-section, .dislike-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.reset-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.count {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  min-width: 30px;
+  text-align: center;
+}
