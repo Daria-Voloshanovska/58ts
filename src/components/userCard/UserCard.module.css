@@ -1,0 +1,17 @@
+.userСard {
+    width: 70%;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0 auto 4px;
+}
+.userCard h4 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.userCard p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}

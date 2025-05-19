@@ -4,12 +4,14 @@
   border: 5px solid #FFF;
   border-bottom-color: #ff8c00;
   border-radius: 50%;
+  border-top-color: transparent;
   display: inline-block;
   box-sizing: border-box;
   animation: rotation 0.7s linear infinite;
   position: absolute;
   top: 45.5%;
   left: 45.5%;
+   margin: 20px auto;
 }
 
 @keyframes rotation {

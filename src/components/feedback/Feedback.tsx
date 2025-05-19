@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Feedback.css";
+import styles from './Feedback.module.css'
 import MyButton from "../myButton/MyButton";
 
 
@@ -17,16 +17,16 @@ function Feedback () {
           setDislikes(0);
      };
      return (
-    <div>
-      <h1>Feedback 😌</h1>
-      <div>
-        <span>{like}</span>
-        <MyButton text="👍" func={handleLike} />
-        <MyButton text="👎" func={handleDislike} />
-        <span>{dislike}</span>
+    <div className={styles.feedbackContainer}>
+      <h1 className={styles.heading}>Feedback 😌</h1>
+      <div className={styles.feedbackButtons}>
+        <span className={styles.count}>{like}</span>
+        <MyButton text="👍" func={handleLike} variant="success" />
+        <MyButton text="👎" func={handleDislike} variant="danger" />
+        <span className={styles.count}>{dislike}</span>
       </div>
-      <div>
-      <MyButton text="Reset Results" func={handleReset} />
+      <div className={styles.resetSection}>
+      <MyButton text="Reset Results" func={handleReset} variant="primary" />
 
 
       </div>

@@ -1,26 +1,31 @@
-.feedback-container {
+.feedbackContainer {
   display: flex;
   gap: 20px;
   padding: 50px;
   border: 2px solid #ccc;
   border-radius: 12px;
-  max-width: 400px;
+  max-width: 500px;
   margin: 50px auto;
   background-color: #9ae6e9;
 }
-.feedback-buttons {
+.heading {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+}
+.feedbackButtons {
   display: flex;
   gap: 20px;
 }
 
-.like-section, .dislike-section {
+.likeSection, .dislikeSection {
   display: flex;
   align-items: center;
   gap: 15px;
   width: 100%;
 }
 
-.reset-section {
+.resetSection {
   width: 100%;
   display: flex;
   justify-content: center;

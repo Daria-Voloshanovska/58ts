@@ -1,15 +1,15 @@
-.cards-grid {
+.cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 16px;
 }
-.weapon-text {
+.weaponText {
   font-weight: bold;
   margin-right: 4px;
 }
 
-.hero-card {
+.heroCard {
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -17,21 +17,21 @@
   flex-direction: column;
 }
 
-.hero-card:hover {
+.heroCard:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 
-.hero-card-light {
+.heroCard-light {
   border-top: 4px solid #3498db;
 }
 
-.hero-card-dark {
+.heroCard-dark {
   border-top: 4px solid #e74c3c;
 }
 
 
-.image-wrapper {
+.imageWrapper {
 height: 300px;
   width: 300px;
   overflow: hidden;
@@ -41,14 +41,14 @@ height: 300px;
   border: 3px solid #3498db;
 }
 
-.image-wrapper img {
+.imageWrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.hero-card-content {
+.heroCardContent {
   padding: 24px;
   flex: 1;
   display: flex;
@@ -56,20 +56,20 @@ height: 300px;
 }
 
 
-.hero-card h3 {
+.heroCard h3 {
   margin: 0 0 8px 0;
   color: #3ca41f;
   font-size: 20px;
 }
 
-.hero-card p {
+.heroCard p {
   font-weight: bold;
   margin: 5px 0;
   color: #6b7274;
   font-size: 14px;
 }
 
-.weapons-list {
+.weaponsList {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -77,16 +77,13 @@ height: 300px;
 }
 
 @media (max-width: 768px) {
-  .homework-container {
-    padding: 16px;
-  }
-  
-  .cards-grid {
+
+  .cardsGrid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 16px;
   }
   
-  .hero-card-content {
+  .heroCardContent {
     padding: 16px;
   }
 }

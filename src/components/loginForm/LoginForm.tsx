@@ -1,11 +1,12 @@
 import MyButton from "../myButton/MyButton";
 import MyInput from "../myInput/MyInput"
-import './LoginForm.css'
+import styles from "./LoginForm.module.css"
+import cn from 'classnames'
 
 function LoginForm() {
     return (
 <>
-<div className="container">
+<div className={cn(styles.container)}>
     <MyInput/>
     <MyButton text ="Enter" type="submit"/>
     <MyInput name="login" type="text" placeholder="Login" label="login: " />

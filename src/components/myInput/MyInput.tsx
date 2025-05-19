@@ -1,4 +1,6 @@
 import type { JSX } from "react";
+import cn from 'classnames'
+import styles from "./MyInput.module.css"
 
 interface IMyInputProps {
     name?: string
@@ -11,9 +13,9 @@ interface IMyInputProps {
 function MyInput({name, type, placeholder,label, onChange}:IMyInputProps): JSX.Element {
 
     return (
-        <label>
+        <label className={cn(styles.label)}>
             {label}
-       <input name={name} type={type} placeholder={placeholder} onChange={onChange}/>
+       <input className={cn(styles.input)} name={name} type={type} placeholder={placeholder} onChange={onChange}/>
       </label>
       
     )

@@ -1,32 +1,51 @@
 import { useEffect, useState } from "react";
 import Loader from '../../components/loader/Loader';
 import MyButton from "../../components/myButton/MyButton";
+import './Fetchfox.css'
 
-export default function Homework07() {
-    const [fox, setFox] = useState<string>('');
+interface IFoxData {
+  image: string;
+  link: string;
+}
+
+export default function FetchFox() {
+    const [foxImg, setFoxImg] = useState<string>('');
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
-    const handleIncrease = () => {
+    const fetchFox  = ():void => {
        setIsLoading(true);
          fetch("https://randomfox.ca/floof/")
       .then((res) => res.json())
-      .then((data) => setFox(data.image));
+      .then((data) => setFoxImg(data.image));
       setIsLoading(false);
+
+//      const fetchFox = ():void => {
+//     setLoading(true)
+//     setTimeout(async ():Promise<void> => {
+//       const res: Response = await fetch('https://randomfox.ca/floof/');
+//       const data: IFoxData = await res.json();
+//       setFoxImg(data.image);
+//       setLoading(false)
+//     }, 2000)
+//   };
   };      
    
     useEffect(() => {
-      handleIncrease()
+      fetchFox ()
     }, []); 
 
     return (
+        
 <div>
-    <h1>Случайная лиса 🦊</h1>
-    <div>
-      <MyButton func={handleIncrease} text="Show another fox"></MyButton>  
-    </div>
+     <h1>Random Fox 🦊</h1>
     {isLoading ? (<Loader/>) : (
-      <img src={fox} alt="Random fox"/>
-      )}
+       <>
+       <section className="fox-wrapper">
+        <img src={foxImg} alt="Random fox"/>
+    </section>
+ <MyButton func={fetchFox } text="Show another fox"></MyButton>  
+       </> 
+        )}
 </div>
     );
 }

@@ -1,0 +1,9 @@
+/* в css modules мы не работаем с селекторами по тегам - пишем селектор по классам */
+
+.heading {
+    color: orange;
+}
+
+.info {
+    font-style: italic;
+}

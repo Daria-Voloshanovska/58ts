@@ -1,4 +1,7 @@
-import "./ProfileCard.css";
+import styles from "./ProfileCard.module.css"
+import cn from 'classnames'
+
+
 interface IProfileCardProps {
   avatar: string;
   firstName: string;
@@ -7,18 +10,18 @@ interface IProfileCardProps {
   hobbies: string[];
 }
 
-function ProfileCard({avatar, firstName, lastName, occupation, hobbies 
+function ProfileCard({avatar, firstName, lastName, occupation, hobbies = []
 }:IProfileCardProps) {
   return (
-    <div className="card">
-      <img src={avatar} alt="avatar" className="avatar" />
+    <div className={cn(styles.card)}>
+    <img src={avatar} alt="avatar" className={cn(styles.avatar)} />
       <h2>
         {firstName} {lastName}
       </h2>
-      <p>
+      <p className={cn(styles.text)}>
         <b>Occupation:</b> {occupation}
       </p>
-      <p>
+      <p className={cn(styles.text)}>
         <b>Hobbies:</b> {hobbies.join(", ")}
       </p>
     </div>

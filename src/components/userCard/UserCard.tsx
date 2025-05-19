@@ -1,5 +1,5 @@
-
-import './UserCard.css'
+import styles from './UserCard.module.css'
+import cn from 'classnames'
 
 interface IUserCardProps {
     name?: string
@@ -14,7 +14,7 @@ function UserCard({ name='John Doe', age=404, hobby }: IUserCardProps) {
 
    
     return (
-        <div className="user-card">
+        <div className={cn(styles.UserCard)}>
             <h4>Name: {name} </h4>
             <p>Age: {age}</p>
             <p>{hobby ? "Hobby: " + hobby : 'No hobby' }</p>
