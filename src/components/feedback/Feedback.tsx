@@ -19,7 +19,7 @@ function Feedback () {
      return (
     <div className={styles.feedbackContainer}>
       <h1 className={styles.heading}>Feedback 😌</h1>
-      <div className={styles.feedbackButtons}>
+      <div className={styles.feedbackBtns}>
         <span className={styles.count}>{like}</span>
         <MyButton text="👍" func={handleLike} variant="success" />
         <MyButton text="👎" func={handleDislike} variant="danger" />

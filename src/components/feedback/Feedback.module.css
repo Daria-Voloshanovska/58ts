@@ -1,21 +1,29 @@
 .feedbackContainer {
   display: flex;
-  gap: 20px;
-  padding: 50px;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+  /* gap: 20px; */
+  padding: 20px;
   border: 2px solid #ccc;
-  border-radius: 12px;
-  max-width: 500px;
-  margin: 50px auto;
+  border-radius: 20px;
+  /* max-width: 500px;
+  margin: 50px auto; */
   background-color: #9ae6e9;
+  /* text-align: center; */
 }
 .heading {
-  text-align: center;
-  font-size: 28px;
-  color: #333;
+ margin-bottom: 40px;
+  font-size: 42px;
+  color: #595757;
 }
-.feedbackButtons {
+.feedbackBtns {
   display: flex;
-  gap: 20px;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
 .likeSection, .dislikeSection {
@@ -26,9 +34,10 @@
 }
 
 .resetSection {
-  width: 100%;
+  /* width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center; */
+  margin-top: 20px;
 }
 
 .count {
