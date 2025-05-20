@@ -1,7 +1,9 @@
 .header {
   width: 100%;
   height: 80px;
-  padding: 0px 60 px;
+  margin: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
   position: sticky;
   top: 0px;
   display: flex;
@@ -34,7 +36,6 @@ header a:hover {
   height: 50px;
 }
 .isActive {
-  /* background-color: whitesmoke; */
   color: rgb(38, 38, 38);
   padding: 15px 20px;
   border-radius: 10px;

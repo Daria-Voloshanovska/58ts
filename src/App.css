@@ -1,3 +1,8 @@
+body {
+background-color: #f5f5f5;
+  color: #383737;
+}
+
 #root {
   /* прибиваем footer к низу и делаем адаптивным под размер контента в main */
   display: flex;
@@ -9,6 +14,7 @@
   /* margin: 0 auto; */
   /* padding: 2rem; */
   text-align: center;
+  background-color: #f5f5f5;
 }
 
 h1 {
@@ -45,11 +51,34 @@ h1 {
 }
 
 .card {
+  background-color: #ffffff;
+  color: #383737;
   padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .read-the-docs {
   color: #888;
 }
+ /* 🌙 Тёмная тема 
+@media (prefers-color-scheme: dark) {
+  #root {
+    background-color: #121212;
+  }
+
+  h1 {
+    color: #ffffff;
+  }
+
+  .card {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+  }
+
+  .read-the-docs {
+    color: #aaa;
+  }
+} */
 
 
