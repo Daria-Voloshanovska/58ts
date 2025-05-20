@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Loader from '../../components/loader/Loader';
 import MyButton from "../../components/myButton/MyButton";
-import './Fetchfox.css'
+import './Fetchfox.module.css'
 
 interface IFoxData {
   image: string;
