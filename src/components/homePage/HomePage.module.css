@@ -1,0 +1,79 @@
+.homePage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  text-align: left; 
+}
+
+.columnsContainer {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.column {
+  flex: 1;
+  background-color: #c2b84f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .columns-container {
+    flex-direction: column;
+  }
+}
+
+.column h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #3a82cb;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.linksContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.linksContainer::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 3px;
+}
+
+.navLink {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #648da8;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navLink:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.navLink.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}

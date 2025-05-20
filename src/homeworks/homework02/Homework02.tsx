@@ -1,5 +1,5 @@
 import ProfileCard from "../../components/ProfileCard/ProfileCard.js"
-import "../../components/ProfileCard/ProfileCard.css";
+import "../../components/ProfileCard/ProfileCard.module.css";
 
 function Homework02() {
  
