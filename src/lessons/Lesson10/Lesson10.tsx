@@ -101,24 +101,9 @@ export default function Lesson10():JSX.Element {
                 )}
       </div>
       {loading && <Loader/>}
-  <div className={styles.factsContainer}>
-                {data.map((item, index) => (
-                    <div key={`${item.imageUrl}-${index}`} className={styles.factCard}>
-                       <div className={styles.imageContainer}>
-                                <img
-                                    src={item.imageUrl}
-                                    alt="Random cat"
-                                    className={styles.catImage}
-                                />
-                        </div>
-                        <div className={styles.textContent}>
-                            <p className={styles.factText}>{item.fact}</p>
-                            <span className={styles.factMeta}>Fact #{index + 1}</span>
-                        </div>
-                    </div>
-                ))}
-      </div>
-      <CatsGallery data={data} />
+      <div className={styles.content}>
+  <CatsGallery data={data} />
+  </div>
     </div>
   );
 };

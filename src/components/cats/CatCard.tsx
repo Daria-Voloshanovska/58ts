@@ -1,4 +1,6 @@
-import styles from '../../lessons/Lesson10/Lesson10.module.css'
+import styles from './CatCard.module.css'
+
+
 interface ICatCard {
   fact: string;
   imageUrl: string;
