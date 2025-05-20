@@ -12,7 +12,8 @@
 }
 
 h1 {
-  color: darkblue;
+  color: rgb(56, 55, 55);
+  text-align: center;
 }
 
 .logo {
@@ -22,7 +23,7 @@ h1 {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #8f93d5aa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);

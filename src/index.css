@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:"Fugaz One", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #7376ae;
   text-decoration: inherit;
 }
 a:hover {
@@ -62,9 +62,9 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: white;
+    color: rgb(189, 76, 187);
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #d4d3d3;
   }
 }
