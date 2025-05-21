@@ -1,3 +1,5 @@
+import styles from "./SpaceMission.module.css"
+
 export default function SpaceMission() {
   const shipName: string = "Apollo 11";
   let crewCount: number = 3;

@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import styles from "./FormGender.module.css";
 import MyButton from "../myButton/MyButton";
+import type { JSX } from "react";
 
 interface IGenderData {
   name: string;
@@ -8,7 +9,7 @@ interface IGenderData {
   probability: number;
 }
 
-export default function FormGender() {
+export default function FormGender():JSX.Element {
   const formik = useFormik({
     initialValues: {
       name: "",

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Loader from '../../components/loader/Loader';
 import MyButton from "../../components/myButton/MyButton";
 import './Fetchfox.module.css'
+import styles from "./Fetchfox.module.css"
 
 interface IFoxData {
   image: string;
@@ -36,11 +37,11 @@ export default function FetchFox() {
 
     return (
         
-<div>
-     <h1>Random Fox 🦊</h1>
+<div className={styles.container}>
+     <h1 className={styles.title}>Random Fox 🦊</h1>
     {isLoading ? (<Loader/>) : (
        <>
-       <section className="fox-wrapper">
+       <section className={styles.foxWrapper}>
         <img src={foxImg} alt="Random fox"/>
     </section>
  <MyButton func={fetchFox } text="Show another fox"></MyButton>  
