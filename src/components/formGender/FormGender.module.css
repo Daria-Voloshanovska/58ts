@@ -1,0 +1,38 @@
+.form {
+    margin: auto; /* сделает по центру*/
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.form > input {
+padding: 6px;
+margin-bottom: 5px;
+border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.result {
+  margin-top: 40px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #eae2b7;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgb(37, 102, 180);
+}
+
+.result h2 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.result p {
+  margin: 5px 0;
+}

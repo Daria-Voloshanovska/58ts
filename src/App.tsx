@@ -19,6 +19,9 @@ import Lesson07 from "./lessons/Lesson07/Lesson07";
 import Lesson08 from "./lessons/Lesson08/Lesson08";
 import Lesson09 from "./lessons/Lesson09/Lesson09";
 import Lesson10 from "./lessons/Lesson10/Lesson10";
+import Lesson11 from "./lessons/Lesson11/Lesson11";
+import Lesson12 from "./lessons/Lesson12/Lesson12";
+import Homework12 from "./homeworks/Homework12/Homework12";
 
 const navHw = [
   { path: "homework-01", title: "Homework01: Business card", element: <Homework01 /> },
@@ -28,19 +31,22 @@ const navHw = [
   { path: "homework-05", title: "Homework05: React map() 🧝🏻‍♂️", element: <Homework05 /> },
   { path: "homework-06", title: "Homework06: TypeScript & Apollo 11 mission", element: <Homework06 /> },
   { path: "homework-07", title: "Homework07: useEffect & Foxes!", element: <Homework07 /> },
+    { path: "homework-12", title: "Homework12 ", element: <Homework12 /> },
 ];
 
 const navLs = [
   { path: "lesson-01", title: "Lesson01: Hello, React!", element: <Lesson01 /> },
   { path: "lesson-02", title: "Lesson02: JSX components", element: <Lesson02 /> },
   { path: "lesson-03", title: "Lesson03: React props 👨‍👩‍👧‍👦", element: <Lesson03 /> },
-  { path: "lesson-04", title: "Lesson04: UseState hook 🪝", element: <Lesson04 /> },
+  { path: "lesson-04", title: "Lesson04: UseStat hook 🪝", element: <Lesson04 /> },
   { path: "lesson-05", title: "Lesson05: React map() 🧝🏻‍♂️", element: <Lesson05 /> },
   { path: "lesson-06", title: "Lesson06: TypeScript pt1 💁‍♂️", element: <Lesson06 /> },
   { path: "lesson-07", title: "Lesson07: TypeScript pt2 💁", element: <Lesson07 /> },
   { path: "lesson-08", title: "Lesson08: UseEffect hook 🪝", element: <Lesson08 /> },
   { path: "lesson-09", title: "Lesson09: CSS modules", element: <Lesson09 /> },
-  { path: "lesson-10", title: "Lesson10: Fletch Cats! 🐈", element: <Lesson10 /> },
+  { path: "lesson-10", title: "Lesson10: React test: Fletch Cats! 🐈", element: <Lesson10 /> },
+  { path: "lesson-11", title: "Lesson11: React Router Dom", element: <Lesson11 /> },
+   { path: "lesson-12", title: "Lesson12: Formik", element: <Lesson12 /> },
 ];
 
 const navLinks = [

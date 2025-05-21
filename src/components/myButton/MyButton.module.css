@@ -4,11 +4,11 @@
 }
 
 .primary {
-  background-color: rgb(147, 204, 128);
+  background-color: #fee440;
 }
 
 .primary:hover {
-  background-color: #84a59d;
+  background-color: #fdc500;
 }
 
 .danger {

@@ -1,0 +1,19 @@
+.form {
+    margin: auto; /* сделает по центру*/
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.form > input {
+padding: 6px;
+margin-bottom: 5px;
+}
+
+.ul {
+    list-style: none;
+}
+
+.ul > li::before {
+    content: '⚡' ;
+}

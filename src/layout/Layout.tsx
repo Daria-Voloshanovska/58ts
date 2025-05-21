@@ -11,7 +11,7 @@ export default function Layout() {
     <>
       <header className={styles.header}>
         {navLinks.map(el => (
-          <NavLink className={({ isActive }) => (isActive ? styles.isActive : '')} to={el.to}>{el.title}</NavLink>
+          <NavLink key={el.to} className={({ isActive }) => (isActive ? styles.isActive : '')} to={el.to}>{el.title}</NavLink>
         ))}
       </header>
       <main className={styles.main}>
