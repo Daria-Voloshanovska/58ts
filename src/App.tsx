@@ -22,6 +22,8 @@ import Lesson10 from "./lessons/Lesson10/Lesson10";
 import Lesson11 from "./lessons/Lesson11/Lesson11";
 import Lesson12 from "./lessons/Lesson12/Lesson12";
 import Homework12 from "./homeworks/Homework12/Homework12";
+import Lesson13 from "./lessons/Lesson13/Lesson13";
+import Homework13 from "./homeworks/Homework13/Homework13";
 
 const navHw = [
   { path: "homework-01", title: "Homework01: Business card", element: <Homework01 /> },
@@ -32,6 +34,7 @@ const navHw = [
   { path: "homework-06", title: "Homework06: TypeScript & Apollo 11 mission", element: <Homework06 /> },
   { path: "homework-07", title: "Homework07: useEffect & Foxes!", element: <Homework07 /> },
     { path: "homework-12", title: "Homework12 ", element: <Homework12 /> },
+    { path: "homework-13", title: "Homework13 ", element: <Homework13 /> },
 ];
 
 const navLs = [
@@ -47,6 +50,7 @@ const navLs = [
   { path: "lesson-10", title: "Lesson10: React test: Fletch Cats! 🐈", element: <Lesson10 /> },
   { path: "lesson-11", title: "Lesson11: React Router Dom", element: <Lesson11 /> },
    { path: "lesson-12", title: "Lesson12: Formik", element: <Lesson12 /> },
+   { path: "lesson-13", title: "Lesson13: Yup ", element: <Lesson13 /> },
 ];
 
 const navLinks = [

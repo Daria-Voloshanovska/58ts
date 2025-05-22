@@ -41,7 +41,7 @@ export default function FormGender():JSX.Element {
           <h2>Results:</h2>
           <p>Name: {formik.values.name}</p>
           <p>Gender: {formik.values.gender}</p>
-          <p>Probability: {formik.values.probability}</p>
+          <p>Probability: {formik.values.probability *100}%</p>
         </div>
       )}
     </div>

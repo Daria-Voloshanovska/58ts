@@ -5,6 +5,7 @@ import cn from "classnames";
 interface IMyButtonProps {
   text?: string;
   type?: "button" | "submit" | "reset";
+  className?: string;
   // описываем функцию внутри обьекта
   func?: () => void;
   // * кнопка активна или нет
@@ -16,6 +17,7 @@ interface IMyButtonProps {
 function MyButton({
   text = "Click me..",
   type = "button",
+  className ="",
   func = () => console.log("click!"),
   disabled = false,
   variant = "primary",
@@ -24,7 +26,7 @@ function MyButton({
     <button
       onClick={func}
       type={type}
-      className={cn(styles.MyButton, {
+      className={cn(styles.MyButton, className, {
         [styles.primary]: variant === "primary",
         [styles.danger]: variant === "danger",
         [styles.success]: variant === "success",
