@@ -17,7 +17,7 @@ interface IMyButtonProps {
 function MyButton({
   text = "Click me..",
   type = "button",
-  className ="",
+  className ="", /* className поможет использовать кнопку с индивидуальными свойствами для разных проэктов */
   func = () => console.log("click!"),
   disabled = false,
   variant = "primary",

@@ -107,8 +107,16 @@ export default function AuthForms() {
           <span className={styles.errorMessage}>
             {registerForm.errors.confirmPassword}
           </span>
-          <MyButton type="submit" text="Create your account" className={styles.authButton} />
+          <MyButton
+            type="submit"
+            text="Create your account"
+            className={styles.authButton}
+          />
         </form>
+      </div>
+
+      <div className={styles.divider}>
+        <span>Already have an account? Sign in.</span>
       </div>
 
       <div className={styles.formCard}>
@@ -131,7 +139,11 @@ export default function AuthForms() {
           <span className={styles.errorMessage}>
             {loginForm.errors.password}
           </span>
-          <MyButton type="submit" text="Sign in" className={styles.authButton} />
+          <MyButton
+            type="submit"
+            text="Sign in"
+            className={styles.authButton}
+          />
         </form>
       </div>
     </div>
