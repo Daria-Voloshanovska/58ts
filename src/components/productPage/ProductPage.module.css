@@ -1,0 +1,129 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+  height: 100%;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ padding: 30px;
+  max-width: 800px;
+   width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  gap: 24px;
+}
+
+.container > h2 {
+  max-width: 500px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+   text-align: center;
+    color: #2d3748;
+}
+
+.imageDescBox {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
+.imageDescBox img {
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  object-fit: contain;
+ 
+  background-size: 200% 100%;
+}
+
+
+.imageDescBox div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.imageDescBox h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444444;
+   margin: 0;
+}
+
+.imageDescBox p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+   margin: 0;
+}
+
+.backlink {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #014f86;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.backlink:hover {
+  background-color: #00509d;
+  color:black;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .imageDescBox {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imageDescBox img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .container {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .container > h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+/* 
+.imageDescBox > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+
+  text-align: left;
+
+  padding: 0 20px 0 0;
+}
+
+.imageDescBox h3 {
+  margin: 0;
+} */
