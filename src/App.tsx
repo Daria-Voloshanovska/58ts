@@ -26,7 +26,9 @@ import Lesson13 from "./lessons/Lesson13/Lesson13";
 import Homework13 from "./homeworks/Homework13/Homework13";
 import Lesson14 from "./lessons/Lesson14/Lesson14";
 import ProductPage from "./components/productPage/ProductPage";
-import Homework14 from "./homeworks/Homewwork14/Homework14";
+import Homework14 from "./homeworks/Homework14/Homework14";
+import Lesson15 from "./lessons/Lesson15/Lesson15";
+import StorePage from "./components/store/storePage/StorePage";
 
 const navHw = [
   { path: "homework-01", title: "Homework01: Business card", element: <Homework01 /> },
@@ -56,13 +58,16 @@ const navLs = [
    { path: "lesson-12", title: "Lesson12: Formik", element: <Lesson12 /> },
    { path: "lesson-13", title: "Lesson13: Yup ", element: <Lesson13 /> },
    { path: "lesson-14", title: "Lesson14: Dynamic Routing ", element: <Lesson14 /> },
+    { path: "lesson-15", title: "Lesson15: React_practice ", element: <Lesson15 /> },
    
 ];
 
 const navLinks = [
   { path: "/", element: <HomePage homework={navHw} lessons={navLs} /> },
-  { path: "*", element: <h1>404 Page found</h1> },
+ 
   { path: "lesson-14/:id", title: "", element: <ProductPage /> },
+  { path: "lesson-15/product/:id", title: "", element: <StorePage /> },
+   { path: "*", element: <h1>404 Page found</h1> },
    
 ];
 
