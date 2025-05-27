@@ -8,6 +8,7 @@ import { Formik } from "formik";
 
 
 
+
 export default function Store(): JSX.Element {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -52,10 +53,8 @@ export default function Store(): JSX.Element {
 
   return (
     <div>
-      <div className={styles.storeWrapper}>
-      <div className={styles.storeContainer}>
-        <div className={styles.formContainer}>
-          <Formik
+      <div className={styles.formContainer}>
+         <Formik
             initialValues={initialState}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
@@ -75,7 +74,8 @@ export default function Store(): JSX.Element {
               </form>
             )}
           </Formik>
-        </div>
+      </div>
+  
         {loading ? (
           <Loader />
         ) : error ? (
@@ -83,13 +83,11 @@ export default function Store(): JSX.Element {
         ) : (
           <div className={styles.productsGrid}>
             {products.map((product) => (
-              <StoreCard key={product.id} product={product}  />
+              <StoreCard key={product.id} product={product}/>
             ))}
             
           </div>
         )}
       </div>
-    </div>
-    </div>
   );
 }

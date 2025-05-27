@@ -1,44 +1,42 @@
-import type { JSX } from "react";
-import type { IProduct } from "../../components/store/types";
-import styles from "./Cart.module.css";
+// import styles from './Cart.module.css'
+// ! забираем данные из контекста
 
+import { useCart } from "../../context/CartContext"
+import MyButton from "../myButton/MyButton"
+import styles from "./Cart.module.css"
 
-interface CartProps {
-  cart: IProduct[];
-}
+ 
 
-export default function Cart({cart}: CartProps): JSX.Element {
-  const total = cart.reduce((sum, product) => sum + product.price, 0);
-  
+export default function Cart() {
+    // ! забираем данные из контекста
+
+   const {cart, removeFromCart, clearCart } = useCart() 
+
+   const getTotalPrice = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)
+   }
+
   return (
-      <div className={styles.cartIconContainer}>
-      
-      <span className={styles.cartIcon}>
-        🛒
-        {cart.length > 0 && (
-          <span className={styles.cartCount}>{cart.length}</span>
-        )}
-      </span>
-
-      <div className={styles.compactCart}>
-        {cart.length === 0 ? (
-          <p>The cart is empty</p>
-        ) : (
-          <>
-            <ul className={styles.compactList}>
-              {cart.map(({ title, price }, index) => (
-                <li key={index}>
-                  <span className={styles.productTitle}>{title}</span>
-                  <span className={styles.productPrice}>€{price.toFixed(2)}</span>
-                </li>
-              ))}
-            </ul>
-            <div className={styles.compactTotal}>
-              Total: €{total.toFixed(2)}
+   <div className={styles.cartContainer}>
+      <h1>Cart 🛒</h1>
+      {cart.length === 0 ? <p>Your cart is empty...</p> : (
+        <>
+          {cart.map(el => (
+            <div className={styles.cartItem} key={el.id}>
+              <span>{el.title}</span>
+              <div>
+                <span className={styles.totalPrice}>  {(el.price * el.quantity).toFixed(2)}€  </span>
+                <span>x{el.quantity} </span>
+                <button onClick={() => removeFromCart(el.id)}>delete</button>
+              </div>
             </div>
-          </>
-        )}
-      </div>
+          ))}
+          <div>
+            <h3>Total price: {getTotalPrice()}€</h3>
+            <MyButton variant="danger" func={clearCart} text="clear cart"/>
+          </div>
+        </>
+      )}
     </div>
-  );
+  )
 }

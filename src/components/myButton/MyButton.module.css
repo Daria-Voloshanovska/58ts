@@ -8,7 +8,7 @@
 }
 
 .primary:hover {
-  background-color: #fdc500;
+  background-color: #b39c4b;
 }
 
 .danger {
@@ -20,11 +20,11 @@
 }
 
 .success {
-  background-color: rgb(106, 176, 0);
+  background-color: #00afb9;
 }
 
 .success:hover {
-  background-color: rgb(152, 212, 61);
+  background-color: #0081a7;
 }
 
 .disabled {

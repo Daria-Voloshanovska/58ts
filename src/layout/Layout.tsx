@@ -3,6 +3,8 @@ import styles from './Layout.module.css'
 
 const navLinks = [
   { to: '/', title: 'Home' },
+   { to: 'products', title: 'Products' },
+   { to: 'cart', title: 'Cart' },
 
 ];
 

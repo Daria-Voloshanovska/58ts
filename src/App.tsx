@@ -29,8 +29,11 @@ import ProductPage from "./components/productPage/ProductPage";
 import Homework14 from "./homeworks/Homework14/Homework14";
 import Lesson15 from "./lessons/Lesson15/Lesson15";
 import StorePage from "./components/store/storePage/StorePage";
+import { CartProvider } from "./context/CartContext";
+import Products from "./components/products/Products";
+import Cart from "./components/cart/Cart";
 
-const navHw = [
+const homeworkRoutes = [
   { path: "homework-01", title: "Homework01: Business card", element: <Homework01 /> },
   { path: "homework-02", title: "Homework02: JSX, My Best Friends!", element: <Homework02 /> },
   { path: "homework-03", title: "Homework03: Props & LogIn form", element: <Homework03 /> },
@@ -43,7 +46,7 @@ const navHw = [
       { path: "homework-14", title: "Homework14: Webstore", element: <Homework14 /> },
 ];
 
-const navLs = [
+const lessonRoutes  = [
   { path: "lesson-01", title: "Lesson01: Hello, React!", element: <Lesson01 /> },
   { path: "lesson-02", title: "Lesson02: JSX components", element: <Lesson02 /> },
   { path: "lesson-03", title: "Lesson03: React props 👨‍👩‍👧‍👦", element: <Lesson03 /> },
@@ -59,38 +62,46 @@ const navLs = [
    { path: "lesson-13", title: "Lesson13: Yup ", element: <Lesson13 /> },
    { path: "lesson-14", title: "Lesson14: Dynamic Routing ", element: <Lesson14 /> },
     { path: "lesson-15", title: "Lesson15: React_practice ", element: <Lesson15 /> },
-   
 ];
 
-const navLinks = [
-  { path: "/", element: <HomePage homework={navHw} lessons={navLs} /> },
- 
+const otherRoutes  = [
+  { path: "/", element: <HomePage homework={homeworkRoutes} lessons={lessonRoutes} /> },
+  { path: "*", element: <h1>404 Page found</h1> },
   { path: "lesson-14/:id", title: "", element: <ProductPage /> },
-  { path: "lesson-15/product/:id", title: "", element: <StorePage /> },
-   { path: "*", element: <h1>404 Page found</h1> },
-   
+  { path: "lesson-15/store/:id", title: "", element: <StorePage /> },
+  
+    { path: "cart", element: <Cart/> },
+    {path: "store", element: <StorePage />},
+    {path: "store/:id ", element: <StorePage/>},
+    {path: "products", element: <Products/>},
+    {path: "products/:id", element: <ProductPage/>},
 ];
+
+const routes = [...otherRoutes, ...homeworkRoutes, ...lessonRoutes];
 
 function App() {
   return (
     // 1. оборачиваем все приложение в HashRouter
     // 2. все маршруты оборачиваем в Routes
     // 3. начинаем описывать структуру с корневого маршрута с Layout
+    // 4.оборачиваем все приложения в CartProvider чтобь иметь доступ к данным из корзины
+    <CartProvider>
     <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          {navLinks.map((el) => {
+          {otherRoutes.map((el) => {
             return <Route key={el.path} path={el.path} element={el.element} />;
           })}
-          {navHw.map((el) => {
+          {homeworkRoutes.map((el) => {
             return <Route key={el.path} path={el.path} element={el.element} />;
           })}
-          {navLs.map((el) => {
+          {lessonRoutes.map((el) => {
             return <Route key={el.path} path={el.path} element={el.element} />;
           })}
         </Route>
       </Routes>
     </HashRouter>
+    </CartProvider>
   );
 }
 
