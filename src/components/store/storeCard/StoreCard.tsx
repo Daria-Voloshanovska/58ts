@@ -30,7 +30,7 @@ export default function StoreCard({product}:IStoreCardProps):JSX.Element {
           </p>
         </div>
         <article>
-           <Link to={`/products/${product.id}`} className={styles.link}><MyButton text='to product'/></Link>
+           <Link to={`/lesson-15/store/${product.id}`} className={styles.link}><MyButton text='more info'/></Link>
            <MyButton func={() => addToCart({
             id: product.id,
             title: product.title,

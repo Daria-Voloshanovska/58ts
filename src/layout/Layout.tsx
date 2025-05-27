@@ -5,6 +5,7 @@ const navLinks = [
   { to: '/', title: 'Home' },
    { to: 'products', title: 'Products' },
    { to: 'cart', title: 'Cart' },
+    {to: "store", title: 'Store'},
 
 ];
 

@@ -32,6 +32,7 @@ import StorePage from "./components/store/storePage/StorePage";
 import { CartProvider } from "./context/CartContext";
 import Products from "./components/products/Products";
 import Cart from "./components/cart/Cart";
+import Store from "./components/store/Store";
 
 const homeworkRoutes = [
   { path: "homework-01", title: "Homework01: Business card", element: <Homework01 /> },
@@ -70,9 +71,10 @@ const otherRoutes  = [
   { path: "lesson-14/:id", title: "", element: <ProductPage /> },
   { path: "lesson-15/store/:id", title: "", element: <StorePage /> },
   
+
     { path: "cart", element: <Cart/> },
-    {path: "store", element: <StorePage />},
-    {path: "store/:id ", element: <StorePage/>},
+    {path: "store", element: <Store/>},
+    // {path: "store/:id ", element: <StorePage/>},
     {path: "products", element: <Products/>},
     {path: "products/:id", element: <ProductPage/>},
 ];
