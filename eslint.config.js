@@ -22,9 +22,11 @@ export default tseslint.config(
       "no-unused-vars": ["warn", { varsIgnorePattern: "^[A-Z_]" }],
       '@typescript-eslint/no-unused-vars' : 0,
       'prefer-const' : 0,
+      '@typescript-eslint/no-explicit-any': 0,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
+    
       ],
     },
   },

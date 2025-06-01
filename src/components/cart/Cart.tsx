@@ -1,20 +1,23 @@
 // import styles from './Cart.module.css'
 // ! забираем данные из контекста
 
-import { useCart } from "../../context/CartContext"
+import { useCart, type ICartItem} from "../../context/CartContext"
 import MyButton from "../myButton/MyButton"
 import styles from "./Cart.module.css"
 
- 
+ export const getTotalPrice = (cart: ICartItem[]) => {
+  return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+};
+
 
 export default function Cart() {
     // ! забираем данные из контекста
 
    const {cart, removeFromCart, clearCart } = useCart() 
 
-   const getTotalPrice = () => {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)
-   }
+  //  const getTotalPrice = () => {
+  //   return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)
+  //  }
 
   return (
    <div className={styles.cartContainer}>
@@ -32,7 +35,7 @@ export default function Cart() {
             </div>
           ))}
           <div>
-            <h3>Total price: {getTotalPrice()}€</h3>
+            <h3>Total price: {getTotalPrice(cart)}€</h3>
             <MyButton variant="danger" func={clearCart} text="clear cart"/>
           </div>
         </>
