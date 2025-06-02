@@ -37,6 +37,8 @@ import Store from "./components/store/Store";
 import Lesson17 from "./lessons/Lesson17/Lesson17";
 import { ProductProvider } from "./components/products/ProfuctContext";
 import { StoreProvider } from "./components/store/StoreContext";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 
 const homeworkRoutes = [
   {
@@ -183,6 +185,7 @@ function App() {
     // 3. начинаем описывать структуру с корневого маршрута с Layout
     // 4.оборачиваем все приложения в CartProvider чтобь иметь доступ к данным из корзины
     // <ThemeProvider>
+    <Provider store={store}>
     <CartProvider>
       <ProductProvider>
         <StoreProvider> 
@@ -210,6 +213,7 @@ function App() {
         </StoreProvider>
       </ProductProvider>
     </CartProvider>
+ </Provider>
     // </ThemeProvider>
   );
 }
