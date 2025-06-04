@@ -1,0 +1,12 @@
+.formStyle > input{
+    font-size: 30px;
+      padding: 5px;
+}
+
+.formStyle div {
+  margin-bottom: 5px;
+}
+
+.formStyle label {
+    font-size: 20px;
+}

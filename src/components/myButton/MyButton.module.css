@@ -38,3 +38,17 @@
   background-color: rgb(196, 196, 196);
   color: rgb(106, 106, 106);
 }
+
+sm {
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 15px;
+}
+
+.md {
+  font-size: 20px;
+}
+
+.lg {
+  font-size: 30px;
+}

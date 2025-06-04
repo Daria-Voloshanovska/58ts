@@ -1,7 +1,6 @@
-
-import { createSlice } from '@reduxjs/toolkit';
-import type { IProductState } from './types';
-import { loadLimitProducts, loadProducts } from './productAction';
+import { createSlice } from "@reduxjs/toolkit";
+import type { IProductState } from "./types";
+import { loadLimitProducts, loadProducts } from "./productAction";
 
 // создаем начальное состояние
 const initialState: IProductState = {
@@ -11,45 +10,44 @@ const initialState: IProductState = {
 };
 
 export const productSlice = createSlice({
-    // уникальное имя slice
-  name: 'productSlice',
-//   передаем начальное состояние
+  // уникальное имя slice
+  name: "productSlice",
+  //   передаем начальное состояние
   initialState,
-//   описание синхронных actions
+  //   описание синхронных actions
   reducers: {},
   //   описание асинхронных actions
   extraReducers: (builder) => {
     builder
-    // ожидание данных
+      // ожидание данных
       .addCase(loadProducts.pending, (state) => {
         state.isLoading = true;
       })
-    //   получение данных
+      //   получение данных
       .addCase(loadProducts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.products = action.payload;
       })
-    //   данные не получены
+      //   данные не получены
       .addCase(loadProducts.rejected, (state, action) => {
-        state.isLoading = false
-        state.products = []
-        state.error = action.payload as string
+        state.isLoading = false;
+        state.products = [];
+        state.error = action.payload as string;
       })
 
-     .addCase(loadLimitProducts.pending, (state) => {
+      .addCase(loadLimitProducts.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(loadLimitProducts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.products = action.payload;
       })
-    //   данные не получены
+      //   данные не получены
       .addCase(loadLimitProducts.rejected, (state, action) => {
         state.isLoading = false;
         state.products = [];
-        state.error = action.payload as string
-      })
-
+        state.error = action.payload as string;
+      });
   },
 });
 

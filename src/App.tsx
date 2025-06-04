@@ -39,6 +39,7 @@ import { ProductProvider } from "./components/products/ProfuctContext";
 import { StoreProvider } from "./components/store/StoreContext";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
+import Login from "./components/login/Login";
 
 const homeworkRoutes = [
   {
@@ -166,14 +167,18 @@ const otherRoutes = [
     element: <HomePage homework={homeworkRoutes} lessons={lessonRoutes} />,
   },
   { path: "*", element: <h1>404 Page found</h1> },
-  { path: "lesson-14/:id", title: "", element: <ProductPage /> },
-  { path: "lesson-15/store/:id", title: "", element: <StorePage /> },
-
+  // { path: "lesson-14/:id", title: "", element: <ProductPage /> },
+  // { path: "lesson-15/store/:id", title: "", element: <StorePage /> },
+ { path: "products", element: <Products /> },
+ { path: "store", element: <Store /> },
   { path: "cart", element: <Cart /> },
-  { path: "store", element: <Store /> },
+  
   // {path: "store/:id ", element: <StorePage/>},
-  { path: "products", element: <Products /> },
-  { path: "products/:id", element: <ProductPage /> },
+  // { path: "products/:id", element: <ProductPage /> },
+ 
+  
+
+   { path: "login", element: <Login /> },
 ];
 
 const routes = [...otherRoutes, ...homeworkRoutes, ...lessonRoutes];

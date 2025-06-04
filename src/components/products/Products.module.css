@@ -27,6 +27,13 @@
   margin-bottom: 2rem;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .label {
   display: flex;
   flex-direction: column;
