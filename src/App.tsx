@@ -40,6 +40,7 @@ import { StoreProvider } from "./components/store/StoreContext";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import Login from "./components/login/Login";
+import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 
 const homeworkRoutes = [
   {
@@ -173,12 +174,12 @@ const otherRoutes = [
  { path: "store", element: <Store /> },
   { path: "cart", element: <Cart /> },
   
-  // {path: "store/:id ", element: <StorePage/>},
-  // { path: "products/:id", element: <ProductPage /> },
+  {path: "store/:id ", element: <StorePage/>},
+  { path: "products/:id", element: <ProductPage /> },
  
   
 
-   { path: "login", element: <Login /> },
+  //  { path: "login", element: <Login /> },
 ];
 
 const routes = [...otherRoutes, ...homeworkRoutes, ...lessonRoutes];
@@ -196,22 +197,25 @@ function App() {
         <StoreProvider> 
         <HashRouter>
           <Routes>
+             {/* защищенные маршруты */}
             <Route path="/" element={<Layout />}>
               {otherRoutes.map((el) => {
                 return (
-                  <Route key={el.path} path={el.path} element={el.element} />
+                  <Route key={el.path} path={el.path} element={<ProtectedRoute outlet={el.element}/>} />
                 );
               })}
               {homeworkRoutes.map((el) => {
                 return (
-                  <Route key={el.path} path={el.path} element={el.element} />
+                  <Route key={el.path} path={el.path} element={<ProtectedRoute outlet={el.element}/>} />
                 );
               })}
               {lessonRoutes.map((el) => {
                 return (
-                  <Route key={el.path} path={el.path} element={el.element} />
+                  <Route key={el.path} path={el.path} element={<ProtectedRoute outlet={el.element}/>} />
                 );
               })}
+              {/* незащищенный маршрут */}
+               <Route path={'login'} element={<Login />} />
             </Route>
           </Routes>
         </HashRouter>
